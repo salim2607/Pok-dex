@@ -1,6 +1,7 @@
 class Pokemon < ApplicationRecord
   belongs_to :type
-
+    # Le poketype doit être présent
+  validates :type_id, presence: true
   # Le nom doit être présent et unique
   validates :name, presence: true, uniqueness: true
 
@@ -9,4 +10,6 @@ class Pokemon < ApplicationRecord
 
   # Le Pokémon doit avoir un type
   validates :type, presence: true
+
+
 end

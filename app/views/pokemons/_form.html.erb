@@ -21,10 +21,11 @@
     <%= form.number_field :level %>
   </div>
 
-  <div>
-    <%= form.label :poketype, style: "display: block" %>
-    <%= form.text_field :poketype %>
-  </div>
+  <div class="field">
+  <%= form.label :type_id, "Type" %>
+  <%= form.collection_select :type_id, Type.all, :id, :name, prompt: "Sélectionne un type" %>
+</div>
+
 
   <div>
     <%= form.label :description, style: "display: block" %>

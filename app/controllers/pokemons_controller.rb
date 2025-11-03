@@ -65,6 +65,6 @@ class PokemonsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def pokemon_params
-      params.expect(pokemon: [ :name, :level, :poketype, :description ])
+      params.expect(pokemon: [ :name, :level, :type_id, :description ])
     end
 end
